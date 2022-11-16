@@ -1,0 +1,34 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>popup</title>
+    <link rel="stylesheet" href="stylee.css">
+</head> 
+<body>
+    <div class="container" >
+
+        <button type="submit" class="btn" onclick="openPopup()">PAY NOW</button>
+        <form action="/popup.html" method="post">
+            <div class="popup" id="popup">
+                <img src="img/404-tick.png">
+                <h2>Thank You!</h2>
+                <p>Your payment is successful. Thank You!</p>
+                <a href="index.html" >!!!</a>
+                <button type="button" onclick="closePopup()">OK</button>
+            </div>
+        </form>
+        
+    </div>
+    <script>
+        let popup = document.getElementById("popup");
+        function openPopup(){
+            popup.classList.add("open-popup");
+        }
+        function closePopup(){
+            popup.classList.remove("open-popup");
+        }
+    </script>
+</body>
+</html>
